@@ -1,4 +1,17 @@
 <section class="jumbotrol text-center">
-    <h2><img class="jumbo-thumbnail" src="https://cdn.auth0.com/styleguide/1.0.0/img/badge.svg"/></h2>
-    <h1>You are in :)</h1>
+    <h2><img class="jumbo-thumbnail img-circle" src="<%= @image %>" /></h2>
+    <h1>Welcome, <%= @name %></h1>
+</section>
+<section class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">Normalized User Profile</div>
+        <div class="panel-body">
+            <pre><%= JSON.pretty_generate(@info) %></pre>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Full User Profile</div>
+          <pre><%= JSON.pretty_generate(@raw_info) %></pre>
+        </div>
+    </div>
 </section>
